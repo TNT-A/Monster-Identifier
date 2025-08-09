@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://cd0x3362k78d4"]
+[gd_scene load_steps=4 format=3 uid="uid://cd0x3362k78d4"]
+
+[ext_resource type="PackedScene" uid="uid://bpc2vbcudwow5" path="res://main/main.tscn" id="1_mx6ys"]
+[ext_resource type="Script" uid="uid://bikyseniolaik" path="res://game_manager/game_manager.gd" id="1_q7vcu"]
+[ext_resource type="PackedScene" uid="uid://b0lqqf8dwxui2" path="res://TitleScreen/title_screen.tscn" id="2_q7vcu"]
 
 [node name="GameManager" type="Node2D"]
+script = ExtResource("1_q7vcu")
+
+[node name="Main" parent="." instance=ExtResource("1_mx6ys")]
+visible = false
+
+[node name="TitleScreen" parent="." instance=ExtResource("2_q7vcu")]

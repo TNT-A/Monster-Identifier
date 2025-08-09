@@ -1,6 +1,6 @@
 Button
-VBoxContainer
 CenterContainer
+VBoxContainer
 Label
 Sprite2D
 HBoxContainer

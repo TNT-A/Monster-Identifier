@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp0e1u8fjopwf"]
+[gd_scene load_steps=8 format=3 uid="uid://dp0e1u8fjopwf"]
 
 [ext_resource type="Script" uid="uid://vwfvnx2832h4" path="res://yes-no-system/yes+node.gd" id="1_vgi0n"]
+[ext_resource type="Texture2D" uid="uid://bf4o0q2xmtpg4" path="res://sprites/Colors/blue.png" id="2_gwc4e"]
+[ext_resource type="Texture2D" uid="uid://sguv7khws0hy" path="res://sprites/Colors/red.png" id="3_q27s4"]
+[ext_resource type="Texture2D" uid="uid://dwthhcb4oablp" path="res://sprites/Colors/yellow.png" id="4_k7o7f"]
+[ext_resource type="Texture2D" uid="uid://csxm2ijmv7bjo" path="res://sprites/Colors/orange.png" id="5_62y85"]
+[ext_resource type="Texture2D" uid="uid://c1b4p3n47bgy7" path="res://sprites/Colors/green.png" id="6_ocjfp"]
+[ext_resource type="Texture2D" uid="uid://wxjw7e1j1io4" path="res://sprites/Colors/purple.png" id="7_bvsrr"]
 
 [node name="Yes+Node" type="Control"]
 layout_mode = 3
@@ -25,15 +31,33 @@ offset_bottom = 647.0
 custom_minimum_size = Vector2(128, 64)
 layout_mode = 2
 
-[node name="ButtonYes" type="Button" parent="CenterContainer/HBoxContainer"]
-custom_minimum_size = Vector2(160, 80)
+[node name="Button" type="Button" parent="CenterContainer/HBoxContainer"]
 layout_mode = 2
-text = "Yeppers"
+icon = ExtResource("2_gwc4e")
 
-[node name="ButtonNo" type="Button" parent="CenterContainer/HBoxContainer"]
-custom_minimum_size = Vector2(160, 80)
+[node name="Button2" type="Button" parent="CenterContainer/HBoxContainer"]
 layout_mode = 2
-text = "NOOOO"
+icon = ExtResource("3_q27s4")
 
-[connection signal="pressed" from="CenterContainer/HBoxContainer/ButtonYes" to="." method="_on_button_yes_pressed"]
-[connection signal="pressed" from="CenterContainer/HBoxContainer/ButtonNo" to="." method="_on_button_no_pressed"]
+[node name="Button3" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_k7o7f")
+
+[node name="Button4" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_62y85")
+
+[node name="Button5" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_ocjfp")
+
+[node name="Button6" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_bvsrr")
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Button6" to="." method="_on_button_6_pressed"]
