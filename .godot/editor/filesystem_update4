@@ -11,3 +11,5 @@ res://yes-no-system/yes+node.tscn
 res://game_manager/game_manager.tscn
 res://game_manager/game_manager.gd
 res://yes-no-system/yes+node.gd
+res://victory/victory.tscn
+res://victory/victory.gd

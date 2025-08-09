@@ -1,22 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://crdpc1hol6wtx"]
 
 [ext_resource type="Script" uid="uid://qadsyt0hlnwm" path="res://round/round_name.gd" id="1_brk51"]
-[ext_resource type="Texture2D" uid="uid://7erqfs2147st" path="res://sprites/Colors/black.png" id="2_1iqtj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pe3ts"]
 font_size = 128
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_brk51"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
 
 [node name="RoundName" type="Node2D"]
 script = ExtResource("1_brk51")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(579, 84)
-texture = ExtResource("2_1iqtj")
-
 [node name="CenterContainer" type="CenterContainer" parent="."]
-offset_top = 146.0
-offset_right = 1152.0
-offset_bottom = 348.0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1149.0
+offset_bottom = 199.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
@@ -26,3 +27,14 @@ layout_mode = 2
 text = "="
 label_settings = SubResource("LabelSettings_pe3ts")
 horizontal_alignment = 1
+
+[node name="Name2" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "="
+label_settings = SubResource("LabelSettings_brk51")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
