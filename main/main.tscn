@@ -1,16 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpc2vbcudwow5"]
+[gd_scene load_steps=4 format=3 uid="uid://bpc2vbcudwow5"]
 
 [ext_resource type="PackedScene" uid="uid://dp0e1u8fjopwf" path="res://yes-no-system/yes+node.tscn" id="1_53q0u"]
 [ext_resource type="Script" uid="uid://dsw8ooc13dwk1" path="res://main/main.gd" id="1_pjrb6"]
-[ext_resource type="Texture2D" uid="uid://bjnglqe5v4tj8" path="res://icon.svg" id="2_c651c"]
 [ext_resource type="PackedScene" uid="uid://crdpc1hol6wtx" path="res://round/round_name.tscn" id="4_3wy1v"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_pjrb6")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576, 339)
-texture = ExtResource("2_c651c")
 
 [node name="Yes+Node" parent="." instance=ExtResource("1_53q0u")]
 anchors_preset = 0
@@ -22,4 +17,4 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="RoundName" parent="." instance=ExtResource("4_3wy1v")]
-position = Vector2(484, 77)
+position = Vector2(0, 110)

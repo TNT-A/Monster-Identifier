@@ -1,0 +1,13 @@
+res://TitleScreen/title_screen.gd
+res://TitleScreen/title_screen.tscn
+res://globals/signal_bus.gd
+res://main/main.gd
+res://question_set_resources/scripts/#eyes.gd
+res://question_set_resources/scripts/colors.gd
+res://main/main.tscn
+res://round/round_name.tscn
+res://round/round_name.gd
+res://yes-no-system/yes+node.tscn
+res://game_manager/game_manager.tscn
+res://game_manager/game_manager.gd
+res://yes-no-system/yes+node.gd
