@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://crdpc1hol6wtx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pe3ts"]
+font_size = 64
+
+[node name="RoundName" type="Node2D"]
+
+[node name="Name" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "# = 🐙 "
+label_settings = SubResource("LabelSettings_pe3ts")
+
+[node name="Icon" type="Sprite2D" parent="."]
