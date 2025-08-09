@@ -1,7 +1,7 @@
 extends Resource
 class_name Colors
 
-var icon_text = "="
+var icon_text = "?"
 var icon_symbol = preload("res://sprites/Colors/blue.png")
 
 var test_list : Array = [

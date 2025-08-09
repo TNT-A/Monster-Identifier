@@ -1,8 +1,69 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpc2vbcudwow5"]
+[gd_scene load_steps=8 format=3 uid="uid://bpc2vbcudwow5"]
 
 [ext_resource type="PackedScene" uid="uid://dp0e1u8fjopwf" path="res://yes-no-system/yes+node.tscn" id="1_53q0u"]
 [ext_resource type="Script" uid="uid://dsw8ooc13dwk1" path="res://main/main.gd" id="1_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://crdpc1hol6wtx" path="res://round/round_name.tscn" id="4_3wy1v"]
+[ext_resource type="PackedScene" uid="uid://cv7255q6sg01v" path="res://victory/victory.tscn" id="4_c651c"]
+
+[sub_resource type="Animation" id="Animation_3wy1v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Yes+Node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RoundName:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1)]
+}
+
+[sub_resource type="Animation" id="Animation_c651c"]
+resource_name = "fade_win"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Yes+Node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1000)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RoundName:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1), Vector2(0, -1000)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3wy1v"]
+_data = {
+&"RESET": SubResource("Animation_3wy1v"),
+&"fade_win": SubResource("Animation_c651c")
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_pjrb6")
@@ -17,4 +78,13 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="RoundName" parent="." instance=ExtResource("4_3wy1v")]
-position = Vector2(0, 110)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -1)
+script = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3wy1v")
+}
+
+[node name="Victory" parent="." instance=ExtResource("4_c651c")]

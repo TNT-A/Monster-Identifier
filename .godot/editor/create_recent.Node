@@ -1,7 +1,12 @@
+Sprite2D
+AnimationPlayer
+Label
+SpringArm3D
+ColorRect
+AnimationTree
+TextureRect
 Button
 CenterContainer
 VBoxContainer
-Label
-Sprite2D
 HBoxContainer
 Control
